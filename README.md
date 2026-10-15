@@ -15,7 +15,7 @@ Landing de una sola pantalla para medir si los estudiantes de UTEC **quieren** e
 | `styles.css` | Diseño (colores, animaciones, versión móvil) |
 | `app.js` | Animaciones, formulario y envío de datos a la base de datos |
 | `config.js` | **Aquí pegas tus claves de Supabase** |
-| `supabase/schema.sql` | Crea las tablas `leads` y `events` y la vista `metrics` |
+| `supabase/schema.sql` | Crea las tablas `leads` y `events` y la vista `analytics.metrics` |
 | `assets/utec-logo.png` | Logo UTEC (reemplázalo por uno en alta resolución con el mismo nombre) |
 
 Sin claves en `config.js`, la página funciona en **modo demo** y guarda los datos solo en tu navegador.
@@ -55,7 +55,7 @@ En Supabase:
 - **SQL Editor**:
 
 ```sql
-select * from metrics;                                               -- visitantes, clics, correos y % de conversión
+select * from analytics.metrics;                                              -- visitantes, clics, correos y % de conversión
 select ref, count(*) from leads group by ref;                        -- qué canal convierte mejor
 select course, count(*) from leads group by course order by 2 desc;  -- cursos más pedidos
 ```

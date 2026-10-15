@@ -31,8 +31,10 @@ drop policy if exists "public can insert events" on public.events;
 create policy "public can insert leads"  on public.leads  for insert to anon with check (true);
 create policy "public can insert events" on public.events for insert to anon with check (true);
 
--- 4) Métricas del experimento (solo visibles para ti en el panel de Supabase)
-create or replace view public.metrics with (security_invoker = true) as
+-- 4) Métricas del experimento. Viven en un esquema privado ("analytics") que la API pública
+--    no expone: solo tú las ves desde el panel de Supabase.
+create schema if not exists analytics;
+create or replace view analytics.metrics as
 select
   (select count(distinct session_id) from public.events where type = 'visit')     as visitantes,
   (select count(distinct session_id) from public.events where type = 'cta_click') as clic_quiero_esto,
@@ -41,5 +43,3 @@ select
         / nullif((select count(distinct session_id) from public.events where type = 'visit'), 0), 1) as pct_clic,
   round(100.0 * (select count(*) from public.leads)
         / nullif((select count(distinct session_id) from public.events where type = 'visit'), 0), 1) as pct_conversion;
-
-revoke all on public.metrics from anon, authenticated;
