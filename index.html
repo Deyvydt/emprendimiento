@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filtra · Estudia solo lo que te van a tomar</title>
+  <meta name="description" content="Exámenes pasados y resúmenes filtrados por tu profesor y tu sílabo actual. Para estudiantes UTEC.">
+  <meta property="og:title" content="Filtra · Deja de estudiar el examen equivocado">
+  <meta property="og:description" content="Exámenes pasados y resúmenes filtrados por tu profesor y tu sílabo actual. Piloto para estudiantes UTEC.">
+  <meta name="theme-color" content="#0f1219">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23dc2626'/%3E%3Cpath d='M8 10h16l-6 7v6l-4 2v-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Filtra, inicio">
+        <span class="utec-pill"><img src="assets/utec-logo.png" alt="UTEC" width="96" height="49"></span>
+        <span class="brand-sep" aria-hidden="true"></span>
+        <span class="brand-name"><span class="brand-mark" aria-hidden="true"></span>Filtra</span>
+      </a>
+      <button class="btn btn-primary btn-sm" data-cta="nav">Quiero esto</button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot-live"></span>Piloto para estudiantes UTEC · 2026-II</span>
+          <h1>Deja de estudiar <span class="strike-wrap"><span class="strike">el examen equivocado</span></span>.</h1>
+          <p class="lead">
+            <strong>Filtramos y organizamos</strong> exámenes pasados y resúmenes según
+            <strong>tu profesor</strong> y <strong>tu sílabo actual</strong>.
+            Encuentra lo que de verdad te sirve en menos de 5 minutos.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg" data-cta="hero">
+              Quiero esto
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a class="btn btn-ghost btn-lg" href="#problema">Ver cómo funciona</a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Gratis durante el piloto</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Solo con correo @utec.edu.pe</li>
+          </ul>
+        </div>
+
+        <!-- Mock interactivo de la app -->
+        <div class="hero-visual" aria-label="Demostración animada: buscar un curso, elegir profesor y ver solo material vigente">
+          <div class="blob blob-a" aria-hidden="true"></div>
+          <div class="blob blob-b" aria-hidden="true"></div>
+          <div class="app">
+            <div class="app-bar">
+              <span></span><span></span><span></span>
+              <em>filtra.app</em>
+            </div>
+            <div class="app-body">
+              <label class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+                <span id="mock-query"></span><i class="caret" aria-hidden="true"></i>
+              </label>
+              <div class="chips" id="mock-chips"></div>
+              <ul class="files" id="mock-files"></ul>
+              <div class="app-foot" id="mock-foot">
+                <span class="timer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg><b id="mock-time">0.0</b> s</span>
+                <span id="mock-summary">Buscando…</span>
+              </div>
+            </div>
+          </div>
+          <div class="stamp" id="mock-stamp" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.2 3.2-.4.9 3.1 2.9 1.5-1 3.1 1 3.1-2.9 1.5-.9 3.1-3.2-.4L12 22l-2.4-2.2-3.2.4-.9-3.1-2.9-1.5 1-3.1-1-3.1 2.9-1.5.9-3.1 3.2.4z"/><path d="M8.5 12.5l2.3 2.3 4.7-5" class="tick"/></svg>
+            <span>Sílabo<br>2026-II</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#problema" aria-label="Bajar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- PROBLEMA: caos interactivo -->
+    <section class="section" id="problema">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">¿Te suena?</span>
+          <h2>El material está en todos lados.<br><span class="muted">Saber si sirve, no.</span></h2>
+          <p>Drive, WhatsApp, el amigo del ciclo pasado… Llega rápido, pero pasas horas comprobando si todavía aplica a tu curso.</p>
+        </div>
+
+        <div class="chaos-card reveal">
+          <div class="chaos-labels" aria-hidden="true">
+            <span class="lbl lbl-ok">Te sirve</span>
+            <span class="lbl lbl-bad">Descartado</span>
+          </div>
+          <div class="chaos" id="chaos" aria-live="polite"></div>
+          <div class="chaos-actions">
+            <button class="btn btn-dark" id="chaos-toggle" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16l-6 7v5l-4 2v-7z"/></svg>
+              <span>Ordenar con Filtra</span>
+            </button>
+            <span class="chaos-hint" id="chaos-hint">Toca el botón y mira qué pasa 👆</span>
+          </div>
+        </div>
+
+        <figure class="quote reveal">
+          <svg class="quote-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34c0-9 4-16 12-20l2 4c-5 3-7 7-7 10h6v10H8zm18 0c0-9 4-16 12-20l2 4c-5 3-7 7-7 10h6v10H26z"/></svg>
+          <blockquote>“No hay tiempo más desperdiciado que tener que validar si un material es correcto o no.”</blockquote>
+          <figcaption>— Leonel C., estudiante de UTEC</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section class="section section-alt" id="solucion">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">Esto es Filtra</span>
+          <h2>Un solo lugar. Solo lo que te van a tomar.</h2>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="f-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="4"/><path d="M16 16h16M16 23h16M16 30h9"/><circle cx="34" cy="34" r="8" class="fill-red"/><path d="M30.5 34l2.5 2.5 4.5-5" class="stroke-white"/></svg>
+            </div>
+            <h3>Sello Sílabo Vigente 2026-II</h3>
+            <p>Cada archivo te dice, apenas lo abres, si coincide con el sílabo actual de tu curso.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="f-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="16" r="7"/><path d="M11 40c1-8 6-12 13-12s12 4 13 12"/><path d="M6 10l4 4 6-7" class="stroke-red"/></svg>
+            </div>
+            <h3>Filtro por profesor</h3>
+            <p>Cada profe evalúa distinto. Practica con los exámenes de <em>tu</em> profesor, no con los de otra sección.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="f-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="6"/><path d="M16 24l6 6 11-12" class="stroke-red"/></svg>
+            </div>
+            <h3>Solucionarios verificados</h3>
+            <p>Resoluciones contrastadas para que no memorices un error antes de la práctica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="section" id="tiempo">
+      <div class="wrap calc reveal">
+        <div class="calc-copy">
+          <span class="kicker">Haz la cuenta</span>
+          <h2>¿Cuánto tiempo pierdes verificando material?</h2>
+          <label for="hours" class="calc-label">Horas por semana: <b id="hours-out">2</b></label>
+          <input type="range" id="hours" min="0.5" max="10" step="0.5" value="2">
+          <div class="range-scale" aria-hidden="true"><span>30 min</span><span>10 h</span></div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <p>En un ciclo de 16 semanas son</p>
+          <div class="big"><span id="sem-hours">32</span><small> horas</small></div>
+          <p class="equiv" id="equiv">≈ 16 películas que no viste 🍿</p>
+          <button class="btn btn-primary" data-cta="calculadora">Quiero recuperar ese tiempo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final" id="unete">
+      <div class="wrap final-inner reveal">
+        <span class="kicker kicker-light">Acceso prioritario</span>
+        <h2>Entra entre los primeros al banco de archivos verificados.</h2>
+        <p>Deja tu correo UTEC y te avisamos cuando tu curso esté listo. Sin spam, solo un correo.</p>
+        <form class="lead-form" data-form="final" novalidate>
+          <div class="field">
+            <input type="email" name="email" placeholder="tucodigo@utec.edu.pe" autocomplete="email" required aria-label="Correo UTEC">
+          </div>
+          <div class="field">
+            <input type="text" name="course" placeholder="¿Qué curso te preocupa más? (opcional)" maxlength="80" aria-label="Curso (opcional)">
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Quiero acceso prioritario</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Equipo Todo al Rojo · Proyecto académico UTEC 2026</span>
+      <span>Filtra está en desarrollo: estás viendo una versión preliminar.</span>
+    </div>
+  </footer>
+
+  <!-- Modal del CTA -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-x" data-close aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="modal-body" id="modal-form-view">
+        <div class="modal-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16l-6 7v5l-4 2v-7z"/></svg>
+        </div>
+        <h3 id="modal-title">¡Genial! Estás a un paso.</h3>
+        <p>Déjanos tu correo UTEC y te damos <b>acceso prioritario</b> cuando abramos el piloto.</p>
+        <form class="lead-form" data-form="modal" novalidate>
+          <div class="field">
+            <input type="email" name="email" placeholder="tucodigo@utec.edu.pe" autocomplete="email" required aria-label="Correo UTEC">
+          </div>
+          <div class="field">
+            <input type="text" name="course" placeholder="¿Qué curso te preocupa más? (opcional)" maxlength="80" aria-label="Curso (opcional)">
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Reservar mi lugar</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+      <div class="modal-body success" id="modal-success" hidden>
+        <div class="success-check" aria-hidden="true">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+        </div>
+        <h3>¡Listo, estás dentro! 🎉</h3>
+        <p id="success-text">Te escribiremos a tu correo UTEC apenas tu curso esté disponible.</p>
+        <p class="small">¿Conoces a alguien que siempre estudia el examen equivocado?</p>
+        <button class="btn btn-dark btn-block" id="share-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+          <span>Compártelo con tu grupo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-badge" id="demo-badge" hidden>Modo demo · los datos se guardan solo en este navegador</div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
